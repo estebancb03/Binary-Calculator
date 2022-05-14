@@ -19,3 +19,13 @@ string MainWindow :: getDataFromComboBox(QComboBox* comboBox) {
 string MainWindow :: getDataFromTextEdit(QTextEdit* textEdit) {
     return textEdit -> toPlainText().toStdString();
 }
+
+void MainWindow :: clear() {
+    ui -> operationComboBox -> setCurrentText("ADDITION ( + )");
+    ui -> number1ComboBox -> setCurrentText("BINARY");
+    ui -> number2ComboBox -> setCurrentText("BINARY");
+    ui -> decimalSolutionTextEdit -> setText("");
+    ui -> binarySolutionTextEdit -> setText("");
+    ui -> number1TextEdit -> setText("");
+    ui -> number2TextEdit -> setText("");
+}

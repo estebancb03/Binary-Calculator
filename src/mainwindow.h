@@ -22,5 +22,6 @@ class MainWindow : public QMainWindow {
         Controller* controller;
         string getDataFromComboBox(QComboBox* comboBox);
         string getDataFromTextEdit(QTextEdit* textEdit);
+        void clear();
 };
 #endif // MAINWINDOW_H

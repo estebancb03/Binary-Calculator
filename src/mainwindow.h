@@ -1,7 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
 #include <QMainWindow>
+#include <QComboBox>>
+#include <QTextEdit>>
 using namespace std;
 
 QT_BEGIN_NAMESPACE
@@ -19,5 +20,7 @@ class MainWindow : public QMainWindow {
     private:
         Ui::MainWindow *ui;
         Controller* controller;
+        string getDataFromComboBox(QComboBox* comboBox);
+        string getDataFromTExtEdit(QTextEdit* textEdit);
 };
 #endif // MAINWINDOW_H

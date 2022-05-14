@@ -9,6 +9,11 @@ class Controller {
     MainWindow *window;
     public:
         Controller();
+        ~Controller();
+        int pushValidate(string operation, int numbers[], string type[]);
+        int pullValidate();
+        int pushCalculate(string operation, int numbers[], string type[]);
+        int* pullCalculate();
 };
 
 #endif // CONTROLLER_H

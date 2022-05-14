@@ -13,7 +13,7 @@
     <x>0</x>
     <y>0</y>
     <width>513</width>
-    <height>598</height>
+    <height>523</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,7 +26,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(238, 238, 236);</string>
+   <string notr="true">background-color: rgba(44, 44, 44, 255);</string>
   </property>
   <property name="tabShape">
    <enum>QTabWidget::Rounded</enum>
@@ -36,7 +36,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>60</y>
+      <y>50</y>
       <width>91</width>
       <height>16</height>
      </rect>
@@ -47,7 +47,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">color: rgb(0, 0, 0);
+color: rgb(243, 243, 243);</string>
     </property>
     <property name="text">
      <string>Operation</string>
@@ -60,7 +61,7 @@
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>54</y>
+      <y>44</y>
       <width>351</width>
       <height>31</height>
      </rect>
@@ -68,12 +69,55 @@
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(243, 243, 243);</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>ADDITION ( + )</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SUBTRACTION ( - )</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>DIVISION ( / )</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>MULTIPLICATION ( * )</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>OR ( | )</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>AND ( &amp; )</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>XOR (  )</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>NOT ( ~ )</string>
+     </property>
+    </item>
    </widget>
    <widget class="QLabel" name="number1Label">
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>115</y>
+      <y>105</y>
       <width>91</width>
       <height>21</height>
      </rect>
@@ -84,7 +128,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">color: rgb(0, 0, 0);
+color: rgb(243, 243, 243);</string>
     </property>
     <property name="text">
      <string>Number</string>
@@ -97,13 +142,16 @@
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>110</y>
+      <y>100</y>
       <width>211</width>
       <height>31</height>
      </rect>
     </property>
     <property name="cursor" stdset="0">
      <cursorShape>IBeamCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(243, 243, 243);</string>
     </property>
    </widget>
    <widget class="QComboBox" name="number1ComboBox">
@@ -113,7 +161,7 @@
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>110</y>
+      <y>100</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -121,6 +169,19 @@
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(243, 243, 243);</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>BINARY</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>DECIMAL</string>
+     </property>
+    </item>
    </widget>
    <widget class="QComboBox" name="number2ComboBox">
     <property name="enabled">
@@ -129,7 +190,7 @@
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>155</y>
+      <y>145</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -137,6 +198,19 @@
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(243, 243, 243);</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>BINARY</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>DECIMAL</string>
+     </property>
+    </item>
    </widget>
    <widget class="QTextEdit" name="number2TextEdit">
     <property name="enabled">
@@ -145,7 +219,7 @@
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>155</y>
+      <y>145</y>
       <width>211</width>
       <height>31</height>
      </rect>
@@ -153,12 +227,15 @@
     <property name="cursor" stdset="0">
      <cursorShape>IBeamCursor</cursorShape>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(243, 243, 243);</string>
+    </property>
    </widget>
    <widget class="QLabel" name="number2Label">
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>160</y>
+      <y>150</y>
       <width>81</width>
       <height>21</height>
      </rect>
@@ -169,7 +246,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">color: rgb(0, 0, 0);
+color: rgb(243, 243, 243);</string>
     </property>
     <property name="text">
      <string>Number</string>
@@ -179,10 +257,14 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>265</y>
+      <y>255</y>
       <width>441</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(243, 243, 243);
+border-color: rgb(243, 243, 243);</string>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -192,13 +274,16 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>400</y>
+      <y>390</y>
       <width>441</width>
       <height>41</height>
      </rect>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(243, 243, 243);</string>
     </property>
     <property name="text">
      <string>Clean</string>
@@ -208,13 +293,16 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>440</y>
+      <y>430</y>
       <width>441</width>
       <height>41</height>
      </rect>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(243, 243, 243);</string>
     </property>
     <property name="text">
      <string>Calculate</string>
@@ -224,7 +312,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>225</y>
+      <y>215</y>
       <width>441</width>
       <height>31</height>
      </rect>
@@ -239,13 +327,14 @@
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">color: rgb(0, 0, 0);
+color: rgb(243, 243, 243);</string>
     </property>
     <property name="text">
      <string>Solutions</string>
     </property>
    </widget>
-   <widget class="QLabel" name="number2Label_2">
+   <widget class="QLabel" name="binarySolutionLabel">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -260,15 +349,16 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">color: rgb(0, 0, 0);
+color: rgb(243, 243, 243);</string>
     </property>
     <property name="text">
      <string>Binary solution</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="number2TextEdit_2">
+   <widget class="QTextEdit" name="binarySolutionTextEdit">
     <property name="enabled">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -281,8 +371,12 @@
     <property name="cursor" stdset="0">
      <cursorShape>IBeamCursor</cursorShape>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(243, 243, 243);
+color: rgb(243, 243, 243);</string>
+    </property>
    </widget>
-   <widget class="QLabel" name="number2Label_3">
+   <widget class="QLabel" name="decimalSolutionLabel">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -297,15 +391,16 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">color: rgb(0, 0, 0);
+color: rgb(243, 243, 243);</string>
     </property>
     <property name="text">
      <string>Decimal solution</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="number2TextEdit_3">
+   <widget class="QTextEdit" name="decimalSolutionTextEdit">
     <property name="enabled">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -317,6 +412,11 @@
     </property>
     <property name="cursor" stdset="0">
      <cursorShape>IBeamCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(243, 243, 243);
+selection-color: rgb(243, 243, 243);
+selection-background-color: rgb(243, 243, 243);</string>
     </property>
    </widget>
   </widget>

@@ -12,9 +12,9 @@ class Controller {
     public:
         Controller();
         ~Controller();
-        int pushValidate(string operation, string numbers[], string type[]);
+        int pushValidate(string operation, string* numbers, string* type);
         int pullValidate();
-        int pushCalculate(string operation, int numbers[], string type[]);
+        int pushCalculate(string operation, string* numbers, string* type);
         int* pullCalculate();
 };
 

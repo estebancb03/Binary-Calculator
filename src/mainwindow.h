@@ -1,8 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include <QMainWindow>
-#include <QComboBox>>
-#include <QTextEdit>>
+#include <QComboBox>
+#include <QTextEdit>
+#include "validate.h"
 using namespace std;
 
 QT_BEGIN_NAMESPACE
@@ -22,11 +23,24 @@ private slots:
 
         void on_operationComboBox_currentTextChanged(const QString &arg1);
 
+        void on_number1TextEdit_textChanged();
+
+        void on_number2TextEdit_selectionChanged();
+
+        void on_number2TextEdit_textChanged();
+
+        void on_number1ComboBox_currentTextChanged(const QString &arg1);
+
+        void on_number2ComboBox_currentTextChanged(const QString &arg1);
+
 private:
         Ui::MainWindow *ui;
+        Validate* validate;
         string getDataFromComboBox(QComboBox* comboBox);
         string getDataFromTextEdit(QTextEdit* textEdit);
         void clear();
         void clearTextEdit(QTextEdit* textEdit);
+        int validateCalculateButton();
+        int validateData(QTextEdit* textEdit, QComboBox* comboBox);
 };
 #endif // MAINWINDOW_H

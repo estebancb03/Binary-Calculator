@@ -5,14 +5,11 @@
 using namespace std;
 
 class Validate {
-    string* type;
-    string* numbers;
-    string operation;
     public:
         Validate();
         ~Validate();
-        int push(string operation, string* numbers, string* type);
-        int pull();
+        int validateAll(string number, string type);
+        int validateEntry(string entry);
         int validateBinary(string number);
         int validateNumber(string number);
 };

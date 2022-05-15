@@ -405,6 +405,9 @@ selection-background-color: rgb(243, 243, 243);</string>
     </property>
    </widget>
    <widget class="QPushButton" name="calculatePushButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>40</x>

@@ -1,12 +1,14 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 #include "mainwindow.h"
+#include "validate.h"
 using namespace std;
 
 class MainWindow;
 
 class Controller {
-    MainWindow *window;
+    MainWindow* window;
+    Validate* validate;
     public:
         Controller();
         ~Controller();

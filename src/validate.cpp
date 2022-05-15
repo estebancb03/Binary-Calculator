@@ -16,13 +16,9 @@ int Validate :: pull() {
     int error = EXIT_SUCCESS;
     int size = sizeof this -> numbers / sizeof this -> numbers[0];
     if (this -> operation == "NOT ( ~ )") {
-        if (size != 1)
-            error = EXIT_FAILURE;
-        else {
-            error = validateNumber(numbers[0]);
-            if (this -> type[0] == "Binary")
-                error = validateBinary(numbers[0]);
-        }
+        error = validateNumber(numbers[0]);
+        if (this -> type[0] == "Binary")
+            error = validateBinary(numbers[0]);
     } else {
         if (size != 2)
             error = EXIT_FAILURE;

@@ -10,21 +10,23 @@ namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
 class Controller;
-
 class MainWindow : public QMainWindow {
     Q_OBJECT
     public:
         MainWindow(QWidget *parent = nullptr);
         ~MainWindow();
-        void setController(Controller* c) { controller = c; }
 private slots:
         void on_cleanPushButton_clicked();
 
+        void on_calculatePushButton_clicked();
+
+        void on_operationComboBox_currentTextChanged(const QString &arg1);
+
 private:
         Ui::MainWindow *ui;
-        Controller* controller;
         string getDataFromComboBox(QComboBox* comboBox);
         string getDataFromTextEdit(QTextEdit* textEdit);
         void clear();
+        void clearTextEdit(QTextEdit* textEdit);
 };
 #endif // MAINWINDOW_H

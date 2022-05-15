@@ -10,14 +10,12 @@ CONFIG += c++17
 
 SOURCES += \
     calculator.cpp \
-    controller.cpp \
     main.cpp \
     mainwindow.cpp \
     validate.cpp
 
 HEADERS += \
     calculator.h \
-    controller.h \
     mainwindow.h \
     validate.h
 

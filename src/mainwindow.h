@@ -17,7 +17,10 @@ class MainWindow : public QMainWindow {
         MainWindow(QWidget *parent = nullptr);
         ~MainWindow();
         void setController(Controller* c) { controller = c; }
-    private:
+private slots:
+        void on_cleanPushButton_clicked();
+
+private:
         Ui::MainWindow *ui;
         Controller* controller;
         string getDataFromComboBox(QComboBox* comboBox);

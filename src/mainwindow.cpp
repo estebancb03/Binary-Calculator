@@ -29,3 +29,7 @@ void MainWindow :: clear() {
     ui -> number1TextEdit -> setText("");
     ui -> number2TextEdit -> setText("");
 }
+
+void MainWindow::on_cleanPushButton_clicked() {
+    clear();
+}

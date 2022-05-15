@@ -11,11 +11,13 @@ CONFIG += c++17
 SOURCES += \
     controller.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    validate.cpp
 
 HEADERS += \
     controller.h \
-    mainwindow.h
+    mainwindow.h \
+    validate.h
 
 FORMS += \
     mainwindow.ui

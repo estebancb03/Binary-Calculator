@@ -47,7 +47,7 @@ int MainWindow :: validateData(QTextEdit* textEdit, QComboBox* comboBox) {
     if (error == EXIT_SUCCESS) {
         clearTextEdit(textEdit);
     } else {
-        textEdit -> setStyleSheet("background-color:rgb(203,50,52);");
+        textEdit -> setStyleSheet("background-color:rgb(207,78,78);");
     }
     return error;
 }
@@ -108,7 +108,6 @@ void MainWindow::on_number1TextEdit_textChanged() {
 void MainWindow::on_number2TextEdit_selectionChanged() {
 
 }
-
 
 void MainWindow::on_number2TextEdit_textChanged() {
     string operation = getDataFromComboBox(ui -> operationComboBox);

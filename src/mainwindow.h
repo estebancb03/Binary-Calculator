@@ -3,7 +3,9 @@
 #include <QMainWindow>
 #include <QComboBox>
 #include <QTextEdit>
+#include <vector>
 #include "validate.h"
+#include "calculator.h"
 using namespace std;
 
 QT_BEGIN_NAMESPACE
@@ -41,6 +43,7 @@ class MainWindow : public QMainWindow {
     private:
         Ui::MainWindow *ui;
         Validate* validate;
+        Calculator* calculator;
 
        /**
         * @brief getDataFromComboBox

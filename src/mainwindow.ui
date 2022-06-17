@@ -13,7 +13,7 @@
     <x>0</x>
     <y>0</y>
     <width>524</width>
-    <height>534</height>
+    <height>581</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -147,7 +147,7 @@ color: rgb(243, 243, 243);</string>
      <rect>
       <x>130</x>
       <y>100</y>
-      <width>211</width>
+      <width>201</width>
       <height>31</height>
      </rect>
     </property>
@@ -224,7 +224,7 @@ color: rgb(243, 243, 243);</string>
      <rect>
       <x>130</x>
       <y>145</y>
-      <width>211</width>
+      <width>201</width>
       <height>31</height>
      </rect>
     </property>
@@ -349,7 +349,7 @@ color: rgb(243, 243, 243);</string>
      <rect>
       <x>190</x>
       <y>345</y>
-      <width>291</width>
+      <width>281</width>
       <height>31</height>
      </rect>
     </property>
@@ -391,7 +391,7 @@ color: rgb(243, 243, 243);</string>
      <rect>
       <x>190</x>
       <y>390</y>
-      <width>291</width>
+      <width>281</width>
       <height>31</height>
      </rect>
     </property>
@@ -433,7 +433,7 @@ selection-background-color: rgb(243, 243, 243);</string>
      <x>0</x>
      <y>0</y>
      <width>524</width>
-     <height>22</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

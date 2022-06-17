@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui -> setupUi(this);
     validate = new Validate();
+    calculator = new Calculator();
 }
 
 MainWindow::~MainWindow() {
@@ -75,12 +76,15 @@ void MainWindow::on_cleanPushButton_clicked() {
 }
 
 void MainWindow::on_calculatePushButton_clicked() {
-    string type1 = getDataFromComboBox(ui -> number1ComboBox);
-    string type2 = getDataFromComboBox(ui -> number2ComboBox);
-    string number1 = getDataFromTextEdit(ui -> number1TextEdit);
-    string number2 = getDataFromTextEdit(ui -> number2TextEdit);
     string operation = getDataFromComboBox(ui -> operationComboBox);
+    vector<string> numbers;
+    vector<string> types;
+    types.push_back(getDataFromComboBox(ui -> number1ComboBox));
+    types.push_back(getDataFromComboBox(ui -> number2ComboBox));
+    numbers.push_back(getDataFromTextEdit(ui -> number1TextEdit));
+    numbers.push_back(getDataFromTextEdit(ui -> number2TextEdit));
     //Invocar método principal de cálculo
+    //this -> calculator -> calculate(operation, numbers, types);
 }
 
 

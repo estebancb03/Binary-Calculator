@@ -1,17 +1,21 @@
 #ifndef CALCULATOR_H
 #define CALCULATOR_H
-#include <iostream>>
+#include <iostream>
+#include <algorithm>
 #include <vector>
+#include <stdio.h>
+#include <string>
 using namespace std;
 
 class Calculator {
     public:
         Calculator();
         ~Calculator();
-        string calculate(string operation, vector<string> numbers, vector<string> types);
+        vector<string> calculate(int operation, vector<string> numbers, vector<string> types);
 
     private:
-        int convertToBinary(int number);
+        vector<string> convertAllToDecimal(vector<string> numbers, vector<string> types);
+        string convertToBinary(int number);
         int convertToDecimal(int number);
         int addition(int num1, int num2);
         int subtraction(int num1, int num2);

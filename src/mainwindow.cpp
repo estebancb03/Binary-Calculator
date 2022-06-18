@@ -18,6 +18,10 @@ string MainWindow :: getDataFromComboBox(QComboBox* comboBox) {
     return comboBox -> currentText().toStdString();
 }
 
+int MainWindow :: getIndexFromComboBox(QComboBox* comboBox) {
+    return (int) comboBox -> currentIndex();
+}
+
 string MainWindow :: getDataFromTextEdit(QTextEdit* textEdit) {
     return textEdit -> toPlainText().toStdString();
 }
@@ -76,7 +80,8 @@ void MainWindow::on_cleanPushButton_clicked() {
 }
 
 void MainWindow::on_calculatePushButton_clicked() {
-    string operation = getDataFromComboBox(ui -> operationComboBox);
+    int operation = getIndexFromComboBox(ui -> operationComboBox);
+    vector<string> results;
     vector<string> numbers;
     vector<string> types;
     types.push_back(getDataFromComboBox(ui -> number1ComboBox));
@@ -84,7 +89,9 @@ void MainWindow::on_calculatePushButton_clicked() {
     numbers.push_back(getDataFromTextEdit(ui -> number1TextEdit));
     numbers.push_back(getDataFromTextEdit(ui -> number2TextEdit));
     //Invocar método principal de cálculo
-    //this -> calculator -> calculate(operation, numbers, types);
+    results = this -> calculator -> calculate(operation, numbers, types);
+    ui -> binarySolutionTextEdit -> setText(QString::fromUtf8(results[0]));
+    ui -> decimalSolutionTextEdit -> setText(QString::fromUtf8(results[1]));
 }
 
 

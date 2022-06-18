@@ -54,6 +54,14 @@ class MainWindow : public QMainWindow {
         string getDataFromComboBox(QComboBox* comboBox);
 
         /**
+         * @brief getIndexFromComboBox
+         * @details obtiene el indice seleccionado del comboBox
+         * @param comboBox
+         * @return indice seleccionado del comboBox
+         */
+         int getIndexFromComboBox(QComboBox* comboBox);
+
+        /**
          * @brief getDataFromTextEdit
          * @details obtiene el texto escrito en el textEdit
          * @param textEdit

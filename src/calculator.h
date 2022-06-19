@@ -9,22 +9,55 @@ using namespace std;
 
 class Calculator {
     public:
+        /**
+         *  @brief Calculator
+         *  @details Método constructor
+         */
         Calculator();
+
+        /**
+         *  @brief ~Calculator
+         *  @details Método destructor
+         */
         ~Calculator();
+
+        /**
+         *  @brief calculate
+         *  @details Invoca los métodos de cálculo y retorna un arreglo con los resultados
+         *           en binario y en decimal
+         *  @param operation
+         *  @param numbers
+         *  @param types
+         *  @return Vector con las soluciones en binario y decimal
+         */
         vector<string> calculate(int operation, vector<string> numbers, vector<string> types);
 
     private:
+        /**
+         *  @brief convertAllToDecimal
+         *  @details Revisa si existen números en formato decimal en el arreglo de numbers,
+         *           si hay los convierte a decimal
+         *  @param numbers
+         *  @param types
+         *  @return Vector con los números introducidos por el usuario en decimal
+         */
         vector<string> convertAllToDecimal(vector<string> numbers, vector<string> types);
+
+        /**
+         *  @brief convertToBinary
+         *  @details Convierte un número de formato decimal a formato binario
+         *  @param number
+         *  @return El número en formato binario
+         */
         string convertToBinary(int number);
+
+        /**
+         *  @brief convertToDecimal
+         *  @details Convierte un número de formato binario a formato decimal
+         *  @param number
+         *  @return El número en formato decimal
+         */
         int convertToDecimal(int number);
-        int addition(int num1, int num2);
-        int subtraction(int num1, int num2);
-        int division(int num1, int num2);
-        int multiplication(int num1, int num2);
-        int OR(int num1, int num2);
-        int AND(int num1, int num2);
-        int XOR(int num1, int num2);
-        int NOT(int num);
 };
 
 #endif // CALCULATOR_H

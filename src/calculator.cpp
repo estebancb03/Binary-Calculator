@@ -21,6 +21,7 @@ vector<string> Calculator :: calculate(int operation, vector<string> numbers, ve
         else
             number2 = std::stol(numbers[1]);
     }
+    // Se invoca al método de Lenguaje Ensamblador
     result = number1 + number2;
     decimalSolution = std::to_string(result);
     binarySolution = convertToBinary(result);

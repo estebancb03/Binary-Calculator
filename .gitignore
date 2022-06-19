@@ -3,5 +3,7 @@ doc/
 .DS_Store
 build-binary-calculator-Desktop_Qt_6_3_0_GCC_64bit-Debug/
 build-binary-calculator-Desktop_Qt_6_3_0_GCC_64_bit-Release/
+build-binary-calculator-Desktop_Qt_6_3_0_GCC_64_bit-Profile/
 build-binary-calculator-Desktop_Qt_6_3_0_MinGW_64_bit-Debug/
 build-binary-calculator-Desktop_Qt_6_3_0_MinGW_64_bit-Release/
+build-binary-calculator-Desktop_Qt_6_3_0_MinGW_64_bit-Profile/

@@ -4,56 +4,29 @@ Calculator::Calculator() {
 
 }
 
-
 vector<string> Calculator :: calculate(int operation, vector<string> numbers, vector<string> types) {
-    vector<string> results;
     long int number1 = 0;
     long int number2 = 0;
-    long int binaryResult = 0;
-    long int decimalResult = 0;
-    string binary = "BINARY";
-
-    if (types[0] == binary) {
-        numbers[0] = to_string(convertToDecimal(std::stol(numbers[0])));
-    }
-
-    number1 = std::stol(numbers[0]);
+    long int result = 0;
+    string binarySolution;
+    string decimalSolution;
+    vector<string> solutions;
+    if (types[0] == "BINARY")
+        number1 = convertToDecimal(std::stol(numbers[0]));
+    else
+        number1 = std::stol(numbers[0]);
     if (operation != 7) {
-        if (types[1] == binary) {
-            numbers[1] = to_string(convertToDecimal(std::stol(numbers[1])));
-        }
-        number2 = std::stol(numbers[1]);
+        if (types[1] == "BINARY")
+            number2 = convertToDecimal(std::stol(numbers[1]));
+        else
+            number2 = std::stol(numbers[1]);
     }
-    switch(operation) {
-        case 0: {
-            decimalResult = number1 + number2;
-        } break;
-        case 1: {
-            decimalResult = number1 - number2;
-        } break;
-        case 2: {
-            decimalResult = number1 / number2;
-        } break;
-        case 3: {
-            decimalResult = number1 * number2;
-        } break;
-        case 4: {
-            decimalResult = 14;
-        } break;
-        case 5: {
-            decimalResult = 15;
-        } break;
-        case 6: {
-            decimalResult = 16;
-        } break;
-        case 7: {
-            decimalResult = 17;
-        } break;
-    }
-
-    results.push_back(convertToBinary(decimalResult));
-    results.push_back(to_string(decimalResult));
-    return results;
+    result = number1 + number2;
+    decimalSolution = std::to_string(result);
+    binarySolution = convertToBinary(result);
+    solutions.push_back(binarySolution);
+    solutions.push_back(decimalSolution);
+    return solutions;
 }
 
 vector<string> Calculator :: convertAllToDecimal(vector<string> numbers, vector<string> types) {
@@ -80,16 +53,16 @@ int Calculator :: convertToDecimal(int number) {
     int base = 1;
     int aux = number;
     while (aux) {
-        int last_digit = aux % 10;
+        int lastDigit = aux % 10;
         aux = aux / 10;
-        result += last_digit * base;
+        result += lastDigit * base;
         base = base * 2;
     }
     return result;
 }
 
 string Calculator :: convertToBinary(int number) {
-    string auxResult;
+    string result;
     string aux;
     while (number > 0) {
         if (number %2 == 0) {
@@ -100,6 +73,6 @@ string Calculator :: convertToBinary(int number) {
         number /= 2;
     }
     for (int index = aux.length() - 1; index >= 0; --index)
-        auxResult += aux.at(index);
-    return auxResult;
+        result += aux.at(index);
+    return result;
 }

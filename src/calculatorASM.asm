@@ -1,8 +1,8 @@
 section .data
 section .text
-global calculator
+global calculatorASM
 
-calculator:
+calculatorASM:
     cmp rdx, 0
     je addition
     cmp rdx, 1

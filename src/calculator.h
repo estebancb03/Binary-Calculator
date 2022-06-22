@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <string>
 using namespace std;
-extern "C" int calculator(int number1, int number2, int operation);
+extern "C" int calculatorASM(int number1, int number2, int operation);
 
 class Calculator {
     public:

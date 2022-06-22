@@ -22,7 +22,7 @@ vector<string> Calculator :: calculate(int operation, vector<string> numbers, ve
             number2 = std::stol(numbers[1]);
     }
     // Se invoca al método de Lenguaje Ensamblador
-    result = calculator(number1, number2, operation);
+    result = calculatorASM(number1, number2, operation);
     decimalSolution = std::to_string(result);
     binarySolution = result >= 0 ? convertToBinary(result)
                                  : convertNegativeToBinary(result);

@@ -24,7 +24,8 @@ vector<string> Calculator :: calculate(int operation, vector<string> numbers, ve
     // Se invoca al método de Lenguaje Ensamblador
     result = number1 + number2;
     decimalSolution = std::to_string(result);
-    binarySolution = convertToBinary(result);
+    binarySolution = result >= 0 ? convertToBinary(result)
+                                 : convertNegativeToBinary(result);
     solutions.push_back(binarySolution);
     solutions.push_back(decimalSolution);
     return solutions;
@@ -66,14 +67,32 @@ string Calculator :: convertToBinary(int number) {
     string result;
     string aux;
     while (number > 0) {
-        if (number %2 == 0) {
+        if (number %2 == 0)
             aux += "0";
-        } else {
+        else
             aux += "1";
-        }
-        number /= 2;
+            number /= 2;
     }
     for (int index = aux.length() - 1; index >= 0; --index)
         result += aux.at(index);
+    return result;
+}
+
+string Calculator :: convertNegativeToBinary(int number) {
+    string result;
+    string aux;
+    string aux1;
+    while(number < 0){
+        if(number %2 == 0)
+            aux += "1";
+        else
+            aux += "0";
+        number /= 2;
+    }
+
+    for(int index = aux.length() - 1; index>=0 ;--index){
+        aux1 = aux.at(index);
+        aux1 == "0" ? result += "1" : result += "0";
+    }
     return result;
 }

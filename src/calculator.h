@@ -52,6 +52,14 @@ class Calculator {
         string convertToBinary(int number);
 
         /**
+         *  @brief convertNegativeToBinary
+         *  @details Convierte un número negativo de formato decimal a formato binario
+         *  @param number
+         *  @return El número negativo en formato binario
+         */
+        string convertNegativeToBinary(int number);
+
+        /**
          *  @brief convertToDecimal
          *  @details Convierte un número de formato binario a formato decimal
          *  @param number

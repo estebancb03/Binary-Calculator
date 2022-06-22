@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <string>
 using namespace std;
+extern "C" int calculator(int number1, int number2, int operation);
 
 class Calculator {
     public:
@@ -66,16 +67,6 @@ class Calculator {
          *  @return El número en formato decimal
          */
         int convertToDecimal(int number);
-
-        /**
-         *  @brief calculate
-         *  @details Hace los cálculos
-         *  @param number1
-         *  @param number2
-         *  @param operation
-         *  @return El número en formato decimal
-         */
-        int calculate(int number1, int number2, int operation);
 };
 
 #endif // CALCULATOR_H

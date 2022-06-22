@@ -1,31 +1,31 @@
 section .data
 section .text
-global funcion
+global calculator
 
-funcion:
+calculator:
     cmp rdx, 0
-    je suma
+    je addition
     cmp rdx, 1
-    je resta
+    je subtraction
     cmp rdx, 2
     je division
     cmp rdx, 3
-    je multiplicacion
+    je multiplication
     cmp rdx, 4
-    je operacionOr
+    je OR
     cmp rdx, 5
-    je operacionAnd
+    je AND
     cmp rdx, 6
-    je operacionXOR
+    je XOR
     cmp rdx, 7
-    je operacionNOT
+    je NOT
 
-    suma:
+    addition:
         add rdi, rsi
         mov rax, rdi
         jmp final
 
-    resta:
+    subtraction:
         sub rdi, rsi
         mov rax, rdi
         jmp final
@@ -35,29 +35,30 @@ funcion:
         mov rax, rdi
         jmp final
 
-    multiplicacion:
+    multiplication:
         imul rdi, rsi
         mov rax, rdi
         jmp final
 
-    operacionOr:
+    OR:
         or rdi, rsi
         mov rax, rdi
         jmp final
 
-    operacionAnd:
+    AND:
         and rdi, rsi
         mov rax, rdi
         jmp final
 
-    operacionXOR:
+    XOR:
         xor rdi, rsi
         mov rax, rdi
         jmp final
 
-    operacionNOT:
+    NOT:
         not rdi
         mov rax, rdi
+        jmp final
 
     final:
         ret

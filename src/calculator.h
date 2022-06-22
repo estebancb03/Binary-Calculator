@@ -35,16 +35,6 @@ class Calculator {
 
     private:
         /**
-         *  @brief convertAllToDecimal
-         *  @details Revisa si existen números en formato decimal en el arreglo de numbers,
-         *           si hay los convierte a decimal
-         *  @param numbers
-         *  @param types
-         *  @return Vector con los números introducidos por el usuario en decimal
-         */
-        vector<string> convertAllToDecimal(vector<string> numbers, vector<string> types);
-
-        /**
          *  @brief convertToBinary
          *  @details Convierte un número de formato decimal a formato binario
          *  @param number

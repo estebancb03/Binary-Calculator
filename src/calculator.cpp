@@ -31,25 +31,6 @@ vector<string> Calculator :: calculate(int operation, vector<string> numbers, ve
     return solutions;
 }
 
-vector<string> Calculator :: convertAllToDecimal(vector<string> numbers, vector<string> types) {
-    long int number = 0;
-    long int newNumber = 0;
-    vector<string> newNumbers;
-    if (types[0] == "BINARY") {
-        number = std::stol(numbers[0]);
-        newNumber = convertToDecimal(number);
-        newNumbers.push_back(to_string(newNumber));
-        newNumbers.push_back(numbers[1]);
-    }
-    if (types[1] == "BINARY") {
-        number = std::stol(numbers[1]);
-        newNumber = convertToDecimal(number);
-        newNumbers.push_back(numbers[0]);
-        newNumbers.push_back(to_string(newNumber));
-    }
-    return newNumbers;
-}
-
 int Calculator :: convertToDecimal(int number) {
     int result = 0;
     int base = 1;

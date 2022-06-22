@@ -12,8 +12,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>524</width>
-    <height>539</height>
+    <width>515</width>
+    <height>530</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -432,8 +432,8 @@ selection-background-color: rgb(243, 243, 243);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>524</width>
-     <height>25</height>
+     <width>515</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

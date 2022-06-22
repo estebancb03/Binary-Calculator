@@ -22,13 +22,44 @@ vector<string> Calculator :: calculate(int operation, vector<string> numbers, ve
             number2 = std::stol(numbers[1]);
     }
     // Se invoca al método de Lenguaje Ensamblador
-    result = number1 + number2;
+    result = calculate(number1, number2, operation);
     decimalSolution = std::to_string(result);
     binarySolution = result >= 0 ? convertToBinary(result)
                                  : convertNegativeToBinary(result);
     solutions.push_back(binarySolution);
     solutions.push_back(decimalSolution);
     return solutions;
+}
+
+int Calculator :: calculate(int number1, int number2, int operation) {
+    int result = 0;
+    switch(operation) {
+        case 0 : {
+            result = number1 + number2;
+        } break;
+        case 1 : {
+            result = number1 - number2;
+        } break;
+        case 2 : {
+            result = number1 / number2;
+        } break;
+        case 3 : {
+            result = number1 * number2;
+        } break;
+        case 4 : {
+            result = number1 | number2;
+        } break;
+        case 5 : {
+            result = number1 & number2;
+        } break;
+        case 6 : {
+            result = number1 ^ number2;
+        } break;
+        case 7 : {
+            result = ~number1;
+        } break;
+    }
+    return result;
 }
 
 vector<string> Calculator :: convertAllToDecimal(vector<string> numbers, vector<string> types) {

@@ -15,7 +15,7 @@ vector<string> Calculator :: calculate(int operation, vector<string> numbers, ve
         number1 = convertToDecimal(std::stol(numbers[0]));
     else
         number1 = std::stol(numbers[0]);
-    if (operation != 7) {
+    if (operation != 9) {
         if (types[1] == "BINARY")
             number2 = convertToDecimal(std::stol(numbers[1]));
         else

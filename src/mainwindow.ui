@@ -113,6 +113,16 @@ color: rgb(243, 243, 243);</string>
     </item>
     <item>
      <property name="text">
+      <string>LEFT SHIFT (&lt;&lt;)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>RIGHT SHIFT (&gt;&gt;)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
       <string>NOT ( ~ )</string>
      </property>
     </item>
@@ -433,7 +443,7 @@ selection-background-color: rgb(243, 243, 243);</string>
      <x>0</x>
      <y>0</y>
      <width>515</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

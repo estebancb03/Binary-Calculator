@@ -18,47 +18,62 @@ calculatorASM:
     cmp rdx, 6
     je XOR
     cmp rdx, 7
+    je shiftLeft
+    cmp rdx, 8
+    je shiftRight
+    cmp rdx, 9
     je NOT
 
     addition:
         add rdi, rsi
         mov rax, rdi
-        jmp final
+        jmp end
 
     subtraction:
         sub rdi, rsi
         mov rax, rdi
-        jmp final
+        jmp end
 
     division:
         idiv rdi
         mov rax, rdi
-        jmp final
+        jmp end
 
     multiplication:
         imul rdi, rsi
         mov rax, rdi
-        jmp final
+        jmp end
 
     OR:
         or rdi, rsi
         mov rax, rdi
-        jmp final
+        jmp end
 
     AND:
         and rdi, rsi
         mov rax, rdi
-        jmp final
+        jmp end
 
     XOR:
         xor rdi, rsi
         mov rax, rdi
-        jmp final
+        jmp end
+
+    shiftLeft:
+        mov rcx, rsi
+        shl rdi, cl 
+        mov rax, rdi
+        jmp end
+
+    shiftRight:
+        mov rcx, rsi
+        shr rdi, cl 
+        mov rax, rdi
+        jmp end
 
     NOT:
         not rdi
         mov rax, rdi
-        jmp final
-
-    final:
+        jmp end
+    end:
         ret

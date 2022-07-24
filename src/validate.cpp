@@ -32,17 +32,28 @@ int Validate :: validateBinary(string number) {
 
 int Validate :: validateNumber(string number) {
     int error = EXIT_SUCCESS;
+    int points = 0;
     error = validateEntry(number);
     if(number[0] == '-') {
         for (int index = 1; number[index] && error == EXIT_SUCCESS; ++index) {
-            if (!isdigit(number[index]))
+            if (number[1] == '.')
                 error = EXIT_FAILURE;
+            if (!isdigit(number[index]) && number[index] != '.')
+                error = EXIT_FAILURE;
+            if (number[index] == '.') {
+                ++points;
+            }
         }
     } else {
         for (int index = 0; number[index] && error == EXIT_SUCCESS; ++index) {
-            if (!isdigit(number[index]))
+            if (!isdigit(number[index]) && number[index] != '.')
                 error = EXIT_FAILURE;
+            if (number[index] == '.')
+                ++points;
         }
     }
+    if (points > 1)
+        error = EXIT_FAILURE;
+
     return error;
 }

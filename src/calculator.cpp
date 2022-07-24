@@ -5,25 +5,25 @@ Calculator::Calculator() {
 }
 
 vector<string> Calculator :: calculate(int operation, vector<string> numbers, vector<string> types) {
-    long int number1 = 0;
-    long int number2 = 0;
+    float number1 = 0;
+    float number2 = 0;
     float result = 0;
     string binarySolution;
     string decimalSolution;
     vector<string> solutions;
     if (types[0] == "BINARY")
-        number1 = convertToDecimal(std::stol(numbers[0]));
+        number1 = convertToDecimal(std::stof(numbers[0]));
     else
-        number1 = std::stol(numbers[0]);
+        number1 = std::stof(numbers[0]);
     if (operation != 9) {
         if (types[1] == "BINARY")
-            number2 = convertToDecimal(std::stol(numbers[1]));
+            number2 = convertToDecimal(std::stof(numbers[1]));
         else
-            number2 = std::stol(numbers[1]);
+            number2 = std::stof(numbers[1]);
     }
     // Se invoca al método de Lenguaje Ensamblador
     //result = calculatorASM(number1, number2, operation);
-    result = 10;
+    result = number1;
     decimalSolution = std::to_string(result);
     binarySolution = convertToBinary(result);
     solutions.push_back(binarySolution);

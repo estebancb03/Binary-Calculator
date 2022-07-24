@@ -5,6 +5,7 @@
 #include <vector>
 #include <stdio.h>
 #include <string>
+#include <bitset>
 using namespace std;
 extern "C" int calculatorASM(int number1, int number2, int operation);
 
@@ -40,15 +41,7 @@ class Calculator {
          *  @param number
          *  @return El número en formato binario
          */
-        string convertToBinary(int number);
-
-        /**
-         *  @brief convertNegativeToBinary
-         *  @details Convierte un número negativo de formato decimal a formato binario
-         *  @param number
-         *  @return El número negativo en formato binario
-         */
-        string convertNegativeToBinary(int number);
+        string convertToBinary(float number);
 
         /**
          *  @brief convertToDecimal
@@ -56,7 +49,7 @@ class Calculator {
          *  @param number
          *  @return El número en formato decimal
          */
-        int convertToDecimal(int number);
+        float convertToDecimal(int number);
 };
 
 #endif // CALCULATOR_H

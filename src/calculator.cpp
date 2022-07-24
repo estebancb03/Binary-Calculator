@@ -7,7 +7,7 @@ Calculator::Calculator() {
 vector<string> Calculator :: calculate(int operation, vector<string> numbers, vector<string> types) {
     long int number1 = 0;
     long int number2 = 0;
-    long int result = 0;
+    float result = 0;
     string binarySolution;
     string decimalSolution;
     vector<string> solutions;
@@ -22,16 +22,16 @@ vector<string> Calculator :: calculate(int operation, vector<string> numbers, ve
             number2 = std::stol(numbers[1]);
     }
     // Se invoca al método de Lenguaje Ensamblador
-    result = calculatorASM(number1, number2, operation);
+    //result = calculatorASM(number1, number2, operation);
+    result = 10;
     decimalSolution = std::to_string(result);
-    binarySolution = result >= 0 ? convertToBinary(result)
-                                 : convertNegativeToBinary(result);
+    binarySolution = convertToBinary(result);
     solutions.push_back(binarySolution);
     solutions.push_back(decimalSolution);
     return solutions;
 }
 
-int Calculator :: convertToDecimal(int number) {
+float Calculator :: convertToDecimal(int number) {
     int result = 0;
     int base = 1;
     int aux = number;
@@ -41,39 +41,11 @@ int Calculator :: convertToDecimal(int number) {
         result += lastDigit * base;
         base = base * 2;
     }
-    return result;
+    return (float) result;
 }
 
-string Calculator :: convertToBinary(int number) {
-    string result;
-    string aux;
-    while (number > 0) {
-        if (number %2 == 0)
-            aux += "0";
-        else
-            aux += "1";
-        number /= 2;
-    }
-    for (int index = aux.length() - 1; index >= 0; --index)
-        result += aux.at(index);
-    return result;
-}
-
-string Calculator :: convertNegativeToBinary(int number) {
-    string result;
-    string aux;
-    string aux1;
-    while(number < 0){
-        if(number %2 == 0)
-            aux += "1";
-        else
-            aux += "0";
-        number /= 2;
-    }
-
-    for(int index = aux.length() - 1; index>=0 ;--index){
-        aux1 = aux.at(index);
-        aux1 == "0" ? result += "1" : result += "0";
-    }
-    return result;
+string Calculator :: convertToBinary(float number) {
+    std::string binary;
+    binary = std::bitset<sizeof number*8>(*(long unsigned int*)(&number)).to_string();
+    return binary;
 }

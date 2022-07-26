@@ -1,5 +1,6 @@
 #ifndef CALCULATOR_H
 #define CALCULATOR_H
+
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -8,6 +9,7 @@
 #include <sstream>
 #include <bitset>
 #include <QString>
+
 using namespace std;
 extern "C" int calculatorASM(const float* number1, const float* number2, int operation, float results[4]);
 

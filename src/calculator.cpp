@@ -11,6 +11,7 @@ vector<string> Calculator :: calculate(int operation, vector<QString> numbers, v
     string binarySolution;
     string decimalSolution;
     vector<string> solutions;
+
     if (types[0] == "BINARY")
         number1 = convertToDecimal(numbers[0].toFloat());
     else
@@ -32,9 +33,9 @@ vector<string> Calculator :: calculate(int operation, vector<QString> numbers, v
         results[index] = 0.0;
     }
 
+    // Se invoca al método de Lenguaje Ensamblador
     calculatorASM(arrayA, arrayB, operation, results);
 
-    // Se invoca al método de Lenguaje Ensamblador
     result = results[0];
 
     if (operation == 7)

@@ -7,6 +7,7 @@
 #include <string>
 #include <sstream>
 #include <bitset>
+#include <QString>
 using namespace std;
 extern "C" int calculatorASM(const float* number1, const float* number2, int operation, float results[4]);
 
@@ -33,7 +34,7 @@ class Calculator {
          *  @param types
          *  @return Vector con las soluciones en binario y decimal
          */
-        vector<string> calculate(int operation, vector<string> numbers, vector<string> types);
+        vector<string> calculate(int operation, vector<QString> numbers, vector<string> types);
 
     private:
         /**

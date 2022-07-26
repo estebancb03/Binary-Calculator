@@ -26,6 +26,10 @@ string MainWindow :: getDataFromTextEdit(QTextEdit* textEdit) {
     return textEdit -> toPlainText().toStdString();
 }
 
+QString MainWindow :: getDataFromTextEdit2(QTextEdit* textEdit) {
+    return textEdit -> toPlainText();
+}
+
 void MainWindow :: clear() {
     ui -> operationComboBox -> setCurrentText("ADDITION ( + )");
     ui -> number1ComboBox -> setCurrentText("BINARY");
@@ -82,12 +86,12 @@ void MainWindow::on_cleanPushButton_clicked() {
 void MainWindow::on_calculatePushButton_clicked() {
     int operation = getIndexFromComboBox(ui -> operationComboBox);
     vector<string> results;
-    vector<string> numbers;
+    vector<QString> numbers;
     vector<string> types;
     types.push_back(getDataFromComboBox(ui -> number1ComboBox));
     types.push_back(getDataFromComboBox(ui -> number2ComboBox));
-    numbers.push_back(getDataFromTextEdit(ui -> number1TextEdit));
-    numbers.push_back(getDataFromTextEdit(ui -> number2TextEdit));
+    numbers.push_back(getDataFromTextEdit2(ui -> number1TextEdit));
+    numbers.push_back(getDataFromTextEdit2(ui -> number2TextEdit));
     //Invocar método principal de cálculo
     results = this -> calculator -> calculate(operation, numbers, types);
     ui -> binarySolutionTextEdit -> setText(QString::fromUtf8(results[0]));

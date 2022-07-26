@@ -70,6 +70,14 @@ class MainWindow : public QMainWindow {
         string getDataFromTextEdit(QTextEdit* textEdit);
 
         /**
+         * @brief getDataFromTextEdit2
+         * @details obtiene el texto escrito en el textEdit
+         * @param textEdit
+         * @return texto escrito en el textEdit
+         */
+        QString getDataFromTextEdit2(QTextEdit* textEdit);
+
+        /**
          * @brief clear
          * @details devuelve todos los elementos del form a su
          *          estado inicial

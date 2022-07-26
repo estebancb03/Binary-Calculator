@@ -4,7 +4,7 @@ Calculator::Calculator() {
 
 }
 
-vector<string> Calculator :: calculate(int operation, vector<string> numbers, vector<string> types) {
+vector<string> Calculator :: calculate(int operation, vector<QString> numbers, vector<string> types) {
     float number1 = 0;
     float number2 = 0;
     float result = 0;
@@ -13,14 +13,14 @@ vector<string> Calculator :: calculate(int operation, vector<string> numbers, ve
     string decimalSolution;
     vector<string> solutions;
     if (types[0] == "BINARY")
-        number1 = convertToDecimal(std::stof(numbers[0]));
+        number1 = convertToDecimal(numbers[0].toFloat());
     else
-        number1 = std::stof(numbers[0]);
+        number1 = numbers[0].toFloat();
     if (operation != 7) {
         if (types[1] == "BINARY")
-            number2 = convertToDecimal(std::stof(numbers[1]));
+            number2 = convertToDecimal(numbers[1].toFloat());
         else
-            number2 = std::stof(numbers[1]);
+            number2 = numbers[0].toFloat();
     }
 
     alignas(16) float arrayA[4];
@@ -33,12 +33,12 @@ vector<string> Calculator :: calculate(int operation, vector<string> numbers, ve
         results[index] = 0.0;
     }
 
-    calculatorASM(arrayA, arrayB, operation, results);
+    // calculatorASM(arrayA, arrayB, operation, results);
 
     // Se invoca al método de Lenguaje Ensamblador
     result = results[0];
-    std::cout << "Number1: " << std::stof(numbers[0]) << std::endl;
-    std::cout << "Number2: " << numbers[1] << std::endl;
+    std::cout << "Number1: " << number1 << std::endl;
+    std::cout << "Number2: " << number2 << std::endl;
     std::cout << "Result: " << result << std::endl;
     decimalSolution = std::to_string(result);
     binarySolution = convertToBinary(result);

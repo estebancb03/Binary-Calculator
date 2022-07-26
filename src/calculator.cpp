@@ -36,6 +36,10 @@ vector<string> Calculator :: calculate(int operation, vector<QString> numbers, v
 
     // Se invoca al método de Lenguaje Ensamblador
     result = results[0];
+
+    if (operation == 7)
+        result -= results[0] * 2 + 1;
+
     decimalSolution = std::to_string(result);
     binarySolution = convertToBinary(result);
     solutions.push_back(binarySolution);

@@ -53,6 +53,8 @@ calculatorASM:
     jmp end
 
   NOT:
+    movaps xmm1, xmm1
+    pxor xmm0, xmm1
     jmp end
 
   end:

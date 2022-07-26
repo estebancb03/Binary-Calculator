@@ -5,9 +5,10 @@
 #include <vector>
 #include <stdio.h>
 #include <string>
+#include <sstream>
 #include <bitset>
 using namespace std;
-extern "C" int calculatorASM(int number1, int number2, int operation);
+extern "C" int calculatorASM(const float* number1, const float* number2, int operation, float results[4]);
 
 class Calculator {
     public:

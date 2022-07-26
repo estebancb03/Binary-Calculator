@@ -312,6 +312,7 @@ DIST          = ../../../Qt/6.3.1/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/6.3.1/gcc_64/mkspecs/features/qt_config.prf \
 		../../../Qt/6.3.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../Qt/6.3.1/gcc_64/mkspecs/features/spec_post.prf \
+		../src/.qmake.stash \
 		../../../Qt/6.3.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../Qt/6.3.1/gcc_64/mkspecs/features/toolchain.prf \
 		../../../Qt/6.3.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -599,6 +600,7 @@ Makefile: ../src/binary-calculator.pro ../../../Qt/6.3.1/gcc_64/mkspecs/linux-g+
 		../../../Qt/6.3.1/gcc_64/mkspecs/features/qt_config.prf \
 		../../../Qt/6.3.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../Qt/6.3.1/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../Qt/6.3.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../Qt/6.3.1/gcc_64/mkspecs/features/toolchain.prf \
 		../../../Qt/6.3.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -874,6 +876,7 @@ Makefile: ../src/binary-calculator.pro ../../../Qt/6.3.1/gcc_64/mkspecs/linux-g+
 ../../../Qt/6.3.1/gcc_64/mkspecs/features/qt_config.prf:
 ../../../Qt/6.3.1/gcc_64/mkspecs/linux-g++/qmake.conf:
 ../../../Qt/6.3.1/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../Qt/6.3.1/gcc_64/mkspecs/features/exclusive_builds.prf:
 ../../../Qt/6.3.1/gcc_64/mkspecs/features/toolchain.prf:
 ../../../Qt/6.3.1/gcc_64/mkspecs/features/default_pre.prf:
@@ -1488,7 +1491,42 @@ mainwindow.o: ../src/mainwindow.cpp ../src/mainwindow.h \
 		../../../Qt/6.3.1/gcc_64/include/QtGui/qpen.h \
 		../src/validate.h \
 		../src/calculator.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/QVariant \
+		../../../Qt/6.3.1/gcc_64/include/QtGui/QIcon \
+		../../../Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
+		../../../Qt/6.3.1/gcc_64/include/QtWidgets/qapplication.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qeventloop.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qfuture.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qfutureinterface.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qmutex.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qresultstore.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qfuture_impl.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qthreadpool.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qthread.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qelapsedtimer.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qrunnable.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qexception.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qpromise.h \
+		../../../Qt/6.3.1/gcc_64/include/QtGui/qguiapplication.h \
+		../../../Qt/6.3.1/gcc_64/include/QtGui/qinputmethod.h \
+		../../../Qt/6.3.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		../../../Qt/6.3.1/gcc_64/include/QtWidgets/QFrame \
+		../../../Qt/6.3.1/gcc_64/include/QtWidgets/QLabel \
+		../../../Qt/6.3.1/gcc_64/include/QtWidgets/qlabel.h \
+		../../../Qt/6.3.1/gcc_64/include/QtGui/qpicture.h \
+		../../../Qt/6.3.1/gcc_64/include/QtWidgets/QMenuBar \
+		../../../Qt/6.3.1/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../Qt/6.3.1/gcc_64/include/QtWidgets/qmenu.h \
+		../../../Qt/6.3.1/gcc_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.3.1/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/6.3.1/gcc_64/include/QtWidgets/QStatusBar \
+		../../../Qt/6.3.1/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../Qt/6.3.1/gcc_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../src/mainwindow.cpp
 
 validate.o: ../src/validate.cpp ../src/validate.h

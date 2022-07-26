@@ -80,8 +80,6 @@ public:
         operationComboBox->addItem(QString());
         operationComboBox->addItem(QString());
         operationComboBox->addItem(QString());
-        operationComboBox->addItem(QString());
-        operationComboBox->addItem(QString());
         operationComboBox->setObjectName(QString::fromUtf8("operationComboBox"));
         operationComboBox->setEnabled(true);
         operationComboBox->setGeometry(QRect(130, 44, 351, 31));
@@ -185,7 +183,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 515, 22));
+        menubar->setGeometry(QRect(0, 0, 515, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -207,9 +205,7 @@ public:
         operationComboBox->setItemText(4, QCoreApplication::translate("MainWindow", "OR ( | )", nullptr));
         operationComboBox->setItemText(5, QCoreApplication::translate("MainWindow", "AND ( & )", nullptr));
         operationComboBox->setItemText(6, QCoreApplication::translate("MainWindow", "XOR ( ^ )", nullptr));
-        operationComboBox->setItemText(7, QCoreApplication::translate("MainWindow", "LEFT SHIFT (<<)", nullptr));
-        operationComboBox->setItemText(8, QCoreApplication::translate("MainWindow", "RIGHT SHIFT (>>)", nullptr));
-        operationComboBox->setItemText(9, QCoreApplication::translate("MainWindow", "NOT ( ~ )", nullptr));
+        operationComboBox->setItemText(7, QCoreApplication::translate("MainWindow", "NOT ( ~ )", nullptr));
 
         number1Label->setText(QCoreApplication::translate("MainWindow", "Number", nullptr));
         number1ComboBox->setItemText(0, QCoreApplication::translate("MainWindow", "BINARY", nullptr));

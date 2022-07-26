@@ -18,7 +18,8 @@ SOURCES += \
     calculator.cpp \
     main.cpp \
     mainwindow.cpp \
-    validate.cpp
+		validate.cpp \
+		calculatorASM.asm
 
 HEADERS += \
     calculator.h \

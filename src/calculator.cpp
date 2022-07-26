@@ -8,7 +8,6 @@ vector<string> Calculator :: calculate(int operation, vector<QString> numbers, v
     float number1 = 0;
     float number2 = 0;
     float result = 0;
-    float test = 0;
     string binarySolution;
     string decimalSolution;
     vector<string> solutions;
@@ -20,7 +19,7 @@ vector<string> Calculator :: calculate(int operation, vector<QString> numbers, v
         if (types[1] == "BINARY")
             number2 = convertToDecimal(numbers[1].toFloat());
         else
-            number2 = numbers[0].toFloat();
+            number2 = numbers[1].toFloat();
     }
 
     alignas(16) float arrayA[4];
@@ -28,18 +27,15 @@ vector<string> Calculator :: calculate(int operation, vector<QString> numbers, v
     alignas(16) float results[4];
 
     for (int index = 0; index < 4; ++index) {
-        arrayA[index] = 10.3;
-        arrayB[index] = 12.4;
+        arrayA[index] = number1;
+        arrayB[index] = number2;
         results[index] = 0.0;
     }
 
-    // calculatorASM(arrayA, arrayB, operation, results);
+    calculatorASM(arrayA, arrayB, operation, results);
 
     // Se invoca al método de Lenguaje Ensamblador
     result = results[0];
-    std::cout << "Number1: " << number1 << std::endl;
-    std::cout << "Number2: " << number2 << std::endl;
-    std::cout << "Result: " << result << std::endl;
     decimalSolution = std::to_string(result);
     binarySolution = convertToBinary(result);
     solutions.push_back(binarySolution);

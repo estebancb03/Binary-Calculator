@@ -1120,6 +1120,7 @@ moc_mainwindow.cpp: ../src/mainwindow.h \
 		../../../Qt/6.3.1/gcc_64/include/QtGui/qpen.h \
 		../src/validate.h \
 		../src/calculator.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/QString \
 		moc_predefs.h \
 		../../../Qt/6.3.1/gcc_64/libexec/moc
 	/home/estebancb/Qt/6.3.1/gcc_64/libexec/moc $(DEFINES) --include /home/estebancb/Documents/Binary-Calculator/build-binary-calculator-Desktop-Debug/moc_predefs.h -I/home/estebancb/Qt/6.3.1/gcc_64/mkspecs/linux-g++ -I/home/estebancb/Documents/Binary-Calculator/src -I/home/estebancb/Qt/6.3.1/gcc_64/include -I/home/estebancb/Qt/6.3.1/gcc_64/include/QtWidgets -I/home/estebancb/Qt/6.3.1/gcc_64/include/QtGui -I/home/estebancb/Qt/6.3.1/gcc_64/include/QtCore -I. -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../src/mainwindow.h -o moc_mainwindow.cpp
@@ -1145,7 +1146,50 @@ compiler_clean: compiler_nasm_clean compiler_moc_predefs_clean compiler_moc_head
 
 ####### Compile
 
-calculator.o: ../src/calculator.cpp ../src/calculator.h
+calculator.o: ../src/calculator.cpp ../src/calculator.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/QString \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qstring.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qchar.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qglobal.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qconfig.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qtcore-config.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qtcoreexports.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qsystemdetection.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qprocessordetection.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qcompilerdetection.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qtypeinfo.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qcontainerfwd.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qsysinfo.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qlogging.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qflags.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qcompare_impl.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qatomic.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qbasicatomic.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qgenericatomic.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qatomic_cxx11.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qglobalstatic.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qnumeric.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qversiontagging.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qstringview.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qbytearray.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qrefcount.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qnamespace.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qtmetamacros.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qarraydata.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qpair.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qarraydatapointer.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qarraydataops.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qcontainertools_impl.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qbytearrayalgorithms.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qbytearrayview.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qstringliteral.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qstringalgorithms.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qanystringview.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qutf8stringview.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qstringtokenizer.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/qstringbuilder.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o calculator.o ../src/calculator.cpp
 
 main.o: ../src/main.cpp ../src/mainwindow.h \
@@ -1308,6 +1352,7 @@ main.o: ../src/main.cpp ../src/mainwindow.h \
 		../../../Qt/6.3.1/gcc_64/include/QtGui/qpen.h \
 		../src/validate.h \
 		../src/calculator.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/QString \
 		../src/controller.h \
 		../../../Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt/6.3.1/gcc_64/include/QtWidgets/qapplication.h \
@@ -1491,6 +1536,7 @@ mainwindow.o: ../src/mainwindow.cpp ../src/mainwindow.h \
 		../../../Qt/6.3.1/gcc_64/include/QtGui/qpen.h \
 		../src/validate.h \
 		../src/calculator.h \
+		../../../Qt/6.3.1/gcc_64/include/QtCore/QString \
 		ui_mainwindow.h \
 		../../../Qt/6.3.1/gcc_64/include/QtCore/QVariant \
 		../../../Qt/6.3.1/gcc_64/include/QtGui/QIcon \
